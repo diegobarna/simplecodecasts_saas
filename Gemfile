@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# Added Ruby to actualize Heroku version
-source "https://rubygems.org"
+# Use Ruby to actualize Heroku version
 ruby "2.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,7 +37,7 @@ gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.0'
@@ -49,7 +48,14 @@ gem 'sdoc', '0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# Use devise for user auth
 gem 'devise', '3.4.1'
+
+# Use stripe for handling payments
+gem 'stripe', '1.16.1'
+
+# Use figaro to hide secret keys
+gem 'figaro', '1.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
