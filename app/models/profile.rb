@@ -1,4 +1,4 @@
 class Profile < ActiveRecord::Base
-  bolongs_to :user
+  belongs_to :user
   
 end
