@@ -1,3 +1,10 @@
+/* Users Show Page Styles */
+
+.user-show-avatar {
+  height: 300px;
+  width: 300px;
+}
+
 .job_title_icon {
   width: 30px;
   height: 30px;
@@ -9,7 +16,7 @@
   color: white;
 }
 
-.profile-picture img {
+.picture-round {
   border-radius: 50%;
 }
 
@@ -28,4 +35,10 @@
 .well.contact-info {
   background-color: #269abc;
   border-color: #1b6d85;
+}
+
+/* Users Index Page Styles */
+
+.well.white-bg {
+  background-color: #fbfbfb;
 }

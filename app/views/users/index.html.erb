@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-3">
+    <ul class="list-unstyled">
+      <% @users.each do |user| %>
+        <% if user.profile %>
+          <li>
+            <div class="well row <%= cycle('white-bg', '') %>">
+              <%= link_to user do %>
+                <div class="col-sm-3 text-center">
+                  <%= image_tag user.profile.avatar.url(:thumb), class: 'picture-round' %>
+                </div>
+              <% end %>
+              <div class="col-sm-5">
+                <%= link_to user do %>
+                  <h3><%= user.profile.first_name %> <%= user.profile.last_name %><h3>
+                <% end %>
+                <h4><%= user.profile.job_title %></h4>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
