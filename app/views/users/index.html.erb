@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-5 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3">
     <ul class="list-unstyled">
       <% @users.each do |user| %>
         <% if user.profile %>
@@ -10,11 +10,16 @@
                   <%= image_tag user.profile.avatar.url(:thumb), class: 'picture-round' %>
                 </div>
               <% end %>
-              <div class="col-sm-5">
+              <div class="col-sm-6">
                 <%= link_to user do %>
                   <h3><%= user.profile.first_name %> <%= user.profile.last_name %><h3>
                 <% end %>
-                <h4><%= user.profile.job_title %></h4>
+                <h4>
+                  <%= user.profile.job_title %>
+                  <% if user.plan_id == 2 %>
+                  <span class="label label-danger">PRO</span>
+                  <% end %>
+                </h4>
               </div>
             </div>
           </li>
