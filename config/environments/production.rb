@@ -80,4 +80,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  # Enable amazon s3 storage for paperclip
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :bucket => 'simplecodecasts'
+  }
 end

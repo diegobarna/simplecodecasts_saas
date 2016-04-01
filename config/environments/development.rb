@@ -34,4 +34,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+    
+  # Enable amazon s3 storage for paperclip
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :bucket => 'simplecodecasts'
+  }
 end
