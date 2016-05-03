@@ -29,15 +29,21 @@
           <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
           <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
         </div>
-      
-        <div class="actions form-group">
+        
+       <div class="actions form-group">
           <%= f.submit "Update", class: 'btn btn-primary' %>
         </div>
       <% end %>
+
+        <% if current_user.plan_id == 1 %>
+          <h3>Upgrade to PRO account</h3>
+          <p>It's only $10/month</p>
+          <%= render "basic_to_pro" %>
+        <% end %>
       
       <h3>Cancel my account</h3>
       
-      <p>All yor data will be deleted! <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
+      <p>All yor data will be deleted forever! <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
       
       <%= link_to "Back", :back %>
     </div>

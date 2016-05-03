@@ -10,11 +10,13 @@
       <p><%= @user.profile.description %></p>
     </div>
     <% if current_user == @user || current_user.plan_id == 2 %>
-    <div class="well profile-block contact-info">
-      <h3>Contact Info</h3>
-      <p><%= @user.profile.phone_number %></p>
-      <p><%= @user.profile.contact_email %></p>
-    </div>
+      <div class="well profile-block contact-info">
+        <h3>Contact Info</h3>
+        <p><%= @user.profile.phone_number %></p>
+        <p><%= @user.profile.contact_email %></p>
+      </div>
+    <% else %>
+      <%= link_to "Upgrade to Pro account to view contact information", edit_user_registration_path, class: 'btn btn-danger btn-lg btn-block' %>
     <% end %>
   </div>
 </div>
