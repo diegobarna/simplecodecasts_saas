@@ -18,3 +18,6 @@
 # Ignore application configuration
 /config/application.yml
 /config/aws.yml
+
+# Ignore Zedrem
+/zedrem
